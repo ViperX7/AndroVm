@@ -1,0 +1,75 @@
+
+
+#--------------unknown-------------------#
+added xorg conf script
+added a chroot process killer
+
+
+
+switched to function based code code rewritten
+added tmpfs support in chroot
+added option to add a new user from main script
+added colour butify CUI
+
+
+
+
+
+#---------------5/3/2018-----------------#
+*added colour to installer 
+*better comments
+*code added to boot image with minimal effort
+*external access scripf optimised (code fixed into proto)
+*about fixed
+*injector added
+*new menu item boot tools
+
+
+#----------------7/3/2018-----------------#
+*fixed syntax for bash shell
+*better comments added for each function
+*major reallingment of format function
+*more code reuse espicaly user interaction
+*optimise imgmake imagemount function now less prompts
+*internal access script optimised (code fixed into proto)
+*uses different loop device for image formating to prevent formating wrong image
+*added fix for internal config
+*modified names of odl access function
+*added support for fixing permissues for new users
+*permission addon fixed and complete will be used with new installer when ready
+*newstyle access script added
+*bigfixes for installer
+*smoot installer not inmlemented
+*checks added for root,directory exist or not ,check for loop device exist removes a lot of err messages during script execution even for old acces scripts
+*bugfixes
+*
+
+#------------------------15/03/2018-----------------------#
+
+*[modified names of odl access function ] reverted new functions are named differently not touching old function functionality
+*multiple commands acceptor for login entry adder
+
+
+#------------------------16/03/2018-----------------------#
+*apt workaround failed reverted
+*permission function tor old installer splited for err msg redusing and increasing productivity
+*new group add mechanism 
+*adding support for internal custom booting functions newstyle permission modified
+*new installer added which uses new styled functions
+
+
+#-----------------------20/02/2018-------------------------#
+fixed an issue that cause installation process to end without creating access script
+fixed newstyyle boot script problems
+
+
+
+#--------------------15/11/2018----------------#
+fixed bootscript generator (new)
+ new script generator can also now use user supplied path to mount  chroot to any location
+
+
+
+#--------------------19/11/2018---------------#
+long pending fix for new boot script 
+a loop problem solved

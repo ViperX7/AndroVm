@@ -1,0 +1,33 @@
+interavtive CUI coloured
+
+Install A linux chroot enviornment 
+     fully autonomous (just basic info required)
+     provides links to bases 
+
+image relared tools
+     no other software required 
+     can create image files of any sizes
+     mount image files
+     format image files
+
+can add users and set them up 
+     internet access inside chroot
+     shortcut support for running apps in chroot directly
+     easy install apps 
+     access the chroot from command line
+
+GUI  you can access gui in several modes
+     using vnx server
+     using a xserver android app
+     natively on your android screen through framrbuffer  (kills android and run device compleatly in linux)
+     automitically configires xorg 
+     
+     
+includes a killer that kills all chroot apps upon exiting chroot
+     
+     
+upcomming 
+    superimpose both chroot and linux on top of each other
+    use bash as default terminal
+    direct install on /data /cache or /system
+    

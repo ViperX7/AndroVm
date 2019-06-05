@@ -1,0 +1,1 @@
+debootstrap --arch armhf jessie /chroot/jessie http://httpredir.debian.org/debian
