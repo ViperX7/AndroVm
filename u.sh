@@ -537,27 +537,114 @@ echo "Setting Up user And Permissions In Linux**********************************
 echo "Creating User Permissions Script"
 echo '#!/bin/sh'>>$mpath/users.sh
 echo 'echo "=>> Adding android groups for various permissions "'>>$mpath/users.sh
+ 
+
+echo 'groupadd -g 1000 aid_system'>>$mpath/users.sh
+echo 'groupadd -g 1001 aid_radio'>>$mpath/users.sh
+echo 'groupadd -g 1002 aid_bluetooth'>>$mpath/users.sh
 echo 'groupadd -g 1003 aid_graphics'>>$mpath/users.sh
 echo 'groupadd -g 1004 aid_input'>>$mpath/users.sh
+echo 'groupadd -g 1005 aid_audio'>>$mpath/users.sh
+echo 'groupadd -g 1006 aid_camera'>>$mpath/users.sh
 echo 'groupadd -g 1007 aid_log'>>$mpath/users.sh
+echo 'groupadd -g 1008 aid_compass'>>$mpath/users.sh
 echo 'groupadd -g 1009 aid_mount'>>$mpath/users.sh
 echo 'groupadd -g 1010 aid_wifi'>>$mpath/users.sh
 echo 'groupadd -g 1011 aid_adb'>>$mpath/users.sh
+echo 'groupadd -g 1012 aid_install'>>$mpath/users.sh
+echo 'groupadd -g 1013 aid_media'>>$mpath/users.sh
+echo 'groupadd -g 1014 aid_dhcp'>>$mpath/users.sh
 echo 'groupadd -g 1015 aid_sdcard_rw'>>$mpath/users.sh
+echo 'groupadd -g 1016 aid_vpn'>>$mpath/users.sh
+echo 'groupadd -g 1017 aid_keystore'>>$mpath/users.sh
 echo 'groupadd -g 1018 aid_usb'>>$mpath/users.sh
+echo 'groupadd -g 1019 aid_drm'>>$mpath/users.sh
 echo 'groupadd -g 1020 aid_mdnsr'>>$mpath/users.sh
+echo 'groupadd -g 1021 aid_gps'>>$mpath/users.sh
 echo 'groupadd -g 1023 aid_media_rw'>>$mpath/users.sh
+echo 'groupadd -g 1024 aid_mtp'>>$mpath/users.sh
+echo 'groupadd -g 1026 aid_drmrpc'>>$mpath/users.sh
+echo 'groupadd -g 1027 aid_nfc'>>$mpath/users.sh
 echo 'groupadd -g 1028 aid_sdcard_r'>>$mpath/users.sh
+echo 'groupadd -g 1029 aid_clat'>>$mpath/users.sh
+echo 'groupadd -g 1030 aid_loop_radio'>>$mpath/users.sh
+echo 'groupadd -g 1031 aid_media_drm'>>$mpath/users.sh
+echo 'groupadd -g 1032 aid_package_info'>>$mpath/users.sh
+echo 'groupadd -g 1033 aid_sdcard_pics'>>$mpath/users.sh
+echo 'groupadd -g 1034 aid_sdcard_av'>>$mpath/users.sh
 echo 'groupadd -g 1035 aid_sdcard_all'>>$mpath/users.sh
+echo 'groupadd -g 1036 aid_logd'>>$mpath/users.sh
+echo 'groupadd -g 1037 aid_shared_relro'>>$mpath/users.sh
+echo 'groupadd -g 1038 aid_dbus'>>$mpath/users.sh
+echo 'groupadd -g 1039 aid_tlsdate'>>$mpath/users.sh
+echo 'groupadd -g 1040 aid_media_ex'>>$mpath/users.sh
+echo 'groupadd -g 1041 aid_audioserver'>>$mpath/users.sh
+echo 'groupadd -g 1042 aid_metrics_coll'>>$mpath/users.sh
+echo 'groupadd -g 1043 aid_metricsd'>>$mpath/users.sh
+echo 'groupadd -g 1044 aid_webserv'>>$mpath/users.sh
+echo 'groupadd -g 1045 aid_debuggerd'>>$mpath/users.sh
+echo 'groupadd -g 1046 aid_media_codec'>>$mpath/users.sh
+echo 'groupadd -g 1047 aid_cameraserver'>>$mpath/users.sh
+echo 'groupadd -g 1048 aid_firewall'>>$mpath/users.sh
+echo 'groupadd -g 1049 aid_trunks'>>$mpath/users.sh
+echo 'groupadd -g 1050 aid_nvram'>>$mpath/users.sh
+echo 'groupadd -g 1051 aid_dns'>>$mpath/users.sh
+echo 'groupadd -g 1052 aid_dns_tether'>>$mpath/users.sh
+echo 'groupadd -g 1053 aid_webview_zygote'>>$mpath/users.sh
+echo 'groupadd -g 1054 aid_vehicle_network'>>$mpath/users.sh
+echo 'groupadd -g 1055 aid_media_audio'>>$mpath/users.sh
+echo 'groupadd -g 1056 aid_media_video'>>$mpath/users.sh
+echo 'groupadd -g 1057 aid_media_image'>>$mpath/users.sh
+echo 'groupadd -g 1058 aid_tombstoned'>>$mpath/users.sh
+echo 'groupadd -g 1059 aid_media_obb'>>$mpath/users.sh
+echo 'groupadd -g 1060 aid_ese'>>$mpath/users.sh
+echo 'groupadd -g 1061 aid_ota_update'>>$mpath/users.sh
+echo 'groupadd -g 1062 aid_automotive_evs'>>$mpath/users.sh
+echo 'groupadd -g 1063 aid_lowpan'>>$mpath/users.sh
+echo 'groupadd -g 1064 aid_hsm'>>$mpath/users.sh
+echo 'groupadd -g 1065 aid_reserved_disk'>>$mpath/users.sh
+echo 'groupadd -g 1066 aid_statsd'>>$mpath/users.sh
+echo 'groupadd -g 1067 aid_incidentd'>>$mpath/users.sh
+echo 'groupadd -g 1068 aid_secure_element'>>$mpath/users.sh
+echo 'groupadd -g 1069 aid_lmkd'>>$mpath/users.sh
+echo 'groupadd -g 1070 aid_llkd'>>$mpath/users.sh
+echo 'groupadd -g 1071 aid_iorapd'>>$mpath/users.sh
+echo 'groupadd -g 1072 aid_gpu_service'>>$mpath/users.sh
+echo 'groupadd -g 1073 aid_network_stack'>>$mpath/users.sh
 echo 'groupadd -g 2000 aid_shell'>>$mpath/users.sh
+echo 'groupadd -g 2001 aid_cache'>>$mpath/users.sh
+echo 'groupadd -g 2002 aid_diag'>>$mpath/users.sh
+echo 'groupadd -g 2900 aid_oem_reserved_start'>>$mpath/users.sh
+echo 'groupadd -g 2999 aid_oem_reserved_end'>>$mpath/users.sh
 echo 'groupadd -g 3001 aid_net_bt_admin'>>$mpath/users.sh
 echo 'groupadd -g 3002 aid_net_bt'>>$mpath/users.sh
 echo 'groupadd -g 3003 aid_inet'>>$mpath/users.sh
-echo 'groupadd -g 3004 aid_inet_raw'>>$mpath/users.sh
-echo 'groupadd -g 3005 aid_inet_admin'>>$mpath/users.sh
+echo 'groupadd -g 3004 aid_net_raw'>>$mpath/users.sh
+echo 'groupadd -g 3005 aid_net_admin'>>$mpath/users.sh
 echo 'groupadd -g 3006 aid_net_bw_stats'>>$mpath/users.sh
 echo 'groupadd -g 3007 aid_net_bw_acct'>>$mpath/users.sh
-echo 'groupadd -g 3008 aid_net_bt_stack'>>$mpath/users.sh   
+echo 'groupadd -g 3009 aid_readproc'>>$mpath/users.sh
+echo 'groupadd -g 3010 aid_wakelock'>>$mpath/users.sh
+echo 'groupadd -g 3011 aid_uhid'>>$mpath/users.sh
+echo 'groupadd -g 9997 aid_everybody'>>$mpath/users.sh
+echo 'groupadd -g 9998 aid_misc'>>$mpath/users.sh
+echo 'groupadd -g 9999 aid_nobody'>>$mpath/users.sh
+echo 'groupadd -g 10000 aid_app_start'>>$mpath/users.sh
+echo 'groupadd -g 19999 aid_app_end'>>$mpath/users.sh
+echo 'groupadd -g 20000 aid_cache_gid_start'>>$mpath/users.sh
+echo 'groupadd -g 29999 aid_cache_gid_end'>>$mpath/users.sh
+echo 'groupadd -g 30000 aid_ext_gid_start'>>$mpath/users.sh
+echo 'groupadd -g 39999 aid_ext_gid_end'>>$mpath/users.sh
+echo 'groupadd -g 40000 aid_ext_cache_gid_start'>>$mpath/users.sh
+echo 'groupadd -g 49999 aid_ext_cache_gid_end'>>$mpath/users.sh
+echo 'groupadd -g 50000 aid_shared_gid_start'>>$mpath/users.sh
+echo 'groupadd -g 59999 aid_shared_gid_end'>>$mpath/users.sh
+echo 'groupadd -g 65534 aid_overflowuid'>>$mpath/users.sh
+echo 'groupadd -g 99000 aid_isolated_start'>>$mpath/users.sh
+echo 'groupadd -g 99999 aid_isolated_end'>>$mpath/users.sh
+echo 'groupadd -g 100000 aid_user_offset'>>$mpath/users.sh
+
+
 echo ''>>$mpath/users.sh
 echo ''>>$mpath/users.sh
 }
@@ -575,32 +662,111 @@ echo 'adduser '$username>>$mpath/users.sh
 fi
 
 echo 'echo "=>> Adding your user to permission groups"'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_system'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_radio'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_bluetooth'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_graphics'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_input'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_audio'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_camera'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_log'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_compass'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_mount'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_wifi'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_adb'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_install'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_dhcp'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_sdcard_rw'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_vpn'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_keystore'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_usb'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_drm'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_mdnsr'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_gps'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_rw'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_mtp'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_drmrpc'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_nfc'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_sdcard_r'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_clat'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_loop_radio'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_drm'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_package_info'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_sdcard_pics'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_sdcard_av'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_sdcard_all'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_logd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_shared_relro'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_dbus'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_tlsdate'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_ex'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_audioserver'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_metrics_coll'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_metricsd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_webserv'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_debuggerd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_codec'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_cameraserver'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_firewall'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_trunks'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_nvram'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_dns'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_dns_tether'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_webview_zygote'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_vehicle_network'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_audio'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_video'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_image'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_tombstoned'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_media_obb'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_ese'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_ota_update'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_automotive_evs'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_lowpan'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_hsm'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_reserved_disk'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_statsd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_incidentd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_secure_element'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_lmkd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_llkd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_iorapd'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_gpu_service'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_network_stack'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_shell'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_cache'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_diag'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_oem_reserved_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_oem_reserved_end'>>$mpath/users.sh
 echo 'gpasswd -a '$username' aid_net_bt_admin'>>$mpath/users.sh
 echo 'gpasswd -a '$username' aid_net_bt'>>$mpath/users.sh
 echo 'gpasswd -a '$username' aid_inet'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_inet_raw'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_inet_admin'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_net_raw'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_net_admin'>>$mpath/users.sh
 echo 'gpasswd -a '$username' aid_net_bw_stats'>>$mpath/users.sh
 echo 'gpasswd -a '$username' aid_net_bw_acct'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_net_bt_stack'>>$mpath/users.sh
-echo 'gpasswd -a '$username' adm'>>$mpath/users.sh
-echo 'gpasswd -a '$username' sudo'>>$mpath/users.sh
-echo 'gpasswd -a '$username' admin'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_graphics'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_input'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_log'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_mount'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_wifi'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_sdcard_rw'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_usb'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_mdnsr'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_media_rw'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_sdcard_r'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_sdcard_all'>>$mpath/users.sh
-echo 'gpasswd -a '$username' aid_shell'>>$mpath/users.sh
-
+echo 'gpasswd -a '$username' aid_readproc'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_wakelock'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_uhid'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_everybody'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_misc'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_nobody'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_app_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_app_end'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_cache_gid_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_cache_gid_end'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_ext_gid_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_ext_gid_end'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_ext_cache_gid_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_ext_cache_gid_end'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_shared_gid_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_shared_gid_end'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_overflowuid'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_isolated_start'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_isolated_end'>>$mpath/users.sh
+echo 'gpasswd -a '$username' aid_user_offset'>>$mpath/users.sh
 }
-
 
 #LINUX CONFIGS ---------END
 
@@ -716,27 +882,113 @@ echo "Setting Up user And Permissions In Linux**********************************
 echo "Creating User Permissions Script"
 #!/bin/sh
 echo "=> Adding android groups for various permissions "
+
+groupadd -g 1000 aid_system
+groupadd -g 1001 aid_radio
+groupadd -g 1002 aid_bluetooth
 groupadd -g 1003 aid_graphics
 groupadd -g 1004 aid_input
+groupadd -g 1005 aid_audio
+groupadd -g 1006 aid_camera
 groupadd -g 1007 aid_log
+groupadd -g 1008 aid_compass
 groupadd -g 1009 aid_mount
 groupadd -g 1010 aid_wifi
 groupadd -g 1011 aid_adb
+groupadd -g 1012 aid_install
+groupadd -g 1013 aid_media
+groupadd -g 1014 aid_dhcp
 groupadd -g 1015 aid_sdcard_rw
+groupadd -g 1016 aid_vpn
+groupadd -g 1017 aid_keystore
 groupadd -g 1018 aid_usb
+groupadd -g 1019 aid_drm
 groupadd -g 1020 aid_mdnsr
+groupadd -g 1021 aid_gps
 groupadd -g 1023 aid_media_rw
+groupadd -g 1024 aid_mtp
+groupadd -g 1026 aid_drmrpc
+groupadd -g 1027 aid_nfc
 groupadd -g 1028 aid_sdcard_r
+groupadd -g 1029 aid_clat
+groupadd -g 1030 aid_loop_radio
+groupadd -g 1031 aid_media_drm
+groupadd -g 1032 aid_package_info
+groupadd -g 1033 aid_sdcard_pics
+groupadd -g 1034 aid_sdcard_av
 groupadd -g 1035 aid_sdcard_all
+groupadd -g 1036 aid_logd
+groupadd -g 1037 aid_shared_relro
+groupadd -g 1038 aid_dbus
+groupadd -g 1039 aid_tlsdate
+groupadd -g 1040 aid_media_ex
+groupadd -g 1041 aid_audioserver
+groupadd -g 1042 aid_metrics_coll
+groupadd -g 1043 aid_metricsd
+groupadd -g 1044 aid_webserv
+groupadd -g 1045 aid_debuggerd
+groupadd -g 1046 aid_media_codec
+groupadd -g 1047 aid_cameraserver
+groupadd -g 1048 aid_firewall
+groupadd -g 1049 aid_trunks
+groupadd -g 1050 aid_nvram
+groupadd -g 1051 aid_dns
+groupadd -g 1052 aid_dns_tether
+groupadd -g 1053 aid_webview_zygote
+groupadd -g 1054 aid_vehicle_network
+groupadd -g 1055 aid_media_audio
+groupadd -g 1056 aid_media_video
+groupadd -g 1057 aid_media_image
+groupadd -g 1058 aid_tombstoned
+groupadd -g 1059 aid_media_obb
+groupadd -g 1060 aid_ese
+groupadd -g 1061 aid_ota_update
+groupadd -g 1062 aid_automotive_evs
+groupadd -g 1063 aid_lowpan
+groupadd -g 1064 aid_hsm
+groupadd -g 1065 aid_reserved_disk
+groupadd -g 1066 aid_statsd
+groupadd -g 1067 aid_incidentd
+groupadd -g 1068 aid_secure_element
+groupadd -g 1069 aid_lmkd
+groupadd -g 1070 aid_llkd
+groupadd -g 1071 aid_iorapd
+groupadd -g 1072 aid_gpu_service
+groupadd -g 1073 aid_network_stack
 groupadd -g 2000 aid_shell
+groupadd -g 2001 aid_cache
+groupadd -g 2002 aid_diag
+groupadd -g 2900 aid_oem_reserved_start
+groupadd -g 2999 aid_oem_reserved_end
 groupadd -g 3001 aid_net_bt_admin
 groupadd -g 3002 aid_net_bt
 groupadd -g 3003 aid_inet
-groupadd -g 3004 aid_inet_raw
-groupadd -g 3005 aid_inet_admin
+groupadd -g 3004 aid_net_raw
+groupadd -g 3005 aid_net_admin
 groupadd -g 3006 aid_net_bw_stats
 groupadd -g 3007 aid_net_bw_acct
-groupadd -g 3008 aid_net_bt_stack   
+groupadd -g 3009 aid_readproc
+groupadd -g 3010 aid_wakelock
+groupadd -g 3011 aid_uhid
+groupadd -g 9997 aid_everybody
+groupadd -g 9998 aid_misc
+groupadd -g 9999 aid_nobody
+groupadd -g 10000 aid_app_start
+groupadd -g 19999 aid_app_end
+groupadd -g 20000 aid_cache_gid_start
+groupadd -g 29999 aid_cache_gid_end
+groupadd -g 30000 aid_ext_gid_start
+groupadd -g 39999 aid_ext_gid_end
+groupadd -g 40000 aid_ext_cache_gid_start
+groupadd -g 49999 aid_ext_cache_gid_end
+groupadd -g 50000 aid_shared_gid_start
+groupadd -g 59999 aid_shared_gid_end
+groupadd -g 65534 aid_overflowuid
+groupadd -g 99000 aid_isolated_start
+groupadd -g 99999 aid_isolated_end
+groupadd -g 100000 aid_user_offset
+
+
 }
 
 
@@ -751,29 +1003,112 @@ echo "=> Creating user account "
 adduser $username
 addpermissiongroups
 echo "=>> Adding your user to permission groups"
+
+gpasswd -a $username aid_system
+gpasswd -a $username aid_radio
+gpasswd -a $username aid_bluetooth
+gpasswd -a $username aid_graphics
+gpasswd -a $username aid_input
+gpasswd -a $username aid_audio
+gpasswd -a $username aid_camera
+gpasswd -a $username aid_log
+gpasswd -a $username aid_compass
+gpasswd -a $username aid_mount
+gpasswd -a $username aid_wifi
+gpasswd -a $username aid_adb
+gpasswd -a $username aid_install
+gpasswd -a $username aid_media
+gpasswd -a $username aid_dhcp
+gpasswd -a $username aid_sdcard_rw
+gpasswd -a $username aid_vpn
+gpasswd -a $username aid_keystore
+gpasswd -a $username aid_usb
+gpasswd -a $username aid_drm
+gpasswd -a $username aid_mdnsr
+gpasswd -a $username aid_gps
+gpasswd -a $username aid_media_rw
+gpasswd -a $username aid_mtp
+gpasswd -a $username aid_drmrpc
+gpasswd -a $username aid_nfc
+gpasswd -a $username aid_sdcard_r
+gpasswd -a $username aid_clat
+gpasswd -a $username aid_loop_radio
+gpasswd -a $username aid_media_drm
+gpasswd -a $username aid_package_info
+gpasswd -a $username aid_sdcard_pics
+gpasswd -a $username aid_sdcard_av
+gpasswd -a $username aid_sdcard_all
+gpasswd -a $username aid_logd
+gpasswd -a $username aid_shared_relro
+gpasswd -a $username aid_dbus
+gpasswd -a $username aid_tlsdate
+gpasswd -a $username aid_media_ex
+gpasswd -a $username aid_audioserver
+gpasswd -a $username aid_metrics_coll
+gpasswd -a $username aid_metricsd
+gpasswd -a $username aid_webserv
+gpasswd -a $username aid_debuggerd
+gpasswd -a $username aid_media_codec
+gpasswd -a $username aid_cameraserver
+gpasswd -a $username aid_firewall
+gpasswd -a $username aid_trunks
+gpasswd -a $username aid_nvram
+gpasswd -a $username aid_dns
+gpasswd -a $username aid_dns_tether
+gpasswd -a $username aid_webview_zygote
+gpasswd -a $username aid_vehicle_network
+gpasswd -a $username aid_media_audio
+gpasswd -a $username aid_media_video
+gpasswd -a $username aid_media_image
+gpasswd -a $username aid_tombstoned
+gpasswd -a $username aid_media_obb
+gpasswd -a $username aid_ese
+gpasswd -a $username aid_ota_update
+gpasswd -a $username aid_automotive_evs
+gpasswd -a $username aid_lowpan
+gpasswd -a $username aid_hsm
+gpasswd -a $username aid_reserved_disk
+gpasswd -a $username aid_statsd
+gpasswd -a $username aid_incidentd
+gpasswd -a $username aid_secure_element
+gpasswd -a $username aid_lmkd
+gpasswd -a $username aid_llkd
+gpasswd -a $username aid_iorapd
+gpasswd -a $username aid_gpu_service
+gpasswd -a $username aid_network_stack
+gpasswd -a $username aid_shell
+gpasswd -a $username aid_cache
+gpasswd -a $username aid_diag
+gpasswd -a $username aid_oem_reserved_start
+gpasswd -a $username aid_oem_reserved_end
 gpasswd -a $username aid_net_bt_admin
 gpasswd -a $username aid_net_bt
 gpasswd -a $username aid_inet
-gpasswd -a $username aid_inet_raw
-gpasswd -a $username aid_inet_admin
+gpasswd -a $username aid_net_raw
+gpasswd -a $username aid_net_admin
 gpasswd -a $username aid_net_bw_stats
 gpasswd -a $username aid_net_bw_acct
-gpasswd -a $username aid_net_bt_stack
-gpasswd -a $username adm
-gpasswd -a $username sudo
-gpasswd -a $username admin
-gpasswd -a $username aid_graphics
-gpasswd -a $username aid_input
-gpasswd -a $username aid_log
-gpasswd -a $username aid_mount
-gpasswd -a $username aid_wifi
-gpasswd -a $username aid_sdcard_rw
-gpasswd -a $username aid_usb
-gpasswd -a $username aid_mdnsr
-gpasswd -a $username aid_media_rw
-gpasswd -a $username aid_sdcard_r
-gpasswd -a $username aid_sdcard_all
-gpasswd -a $username aid_shell
+gpasswd -a $username aid_readproc
+gpasswd -a $username aid_wakelock
+gpasswd -a $username aid_uhid
+gpasswd -a $username aid_everybody
+gpasswd -a $username aid_misc
+gpasswd -a $username aid_nobody
+gpasswd -a $username aid_app_start
+gpasswd -a $username aid_app_end
+gpasswd -a $username aid_cache_gid_start
+gpasswd -a $username aid_cache_gid_end
+gpasswd -a $username aid_ext_gid_start
+gpasswd -a $username aid_ext_gid_end
+gpasswd -a $username aid_ext_cache_gid_start
+gpasswd -a $username aid_ext_cache_gid_end
+gpasswd -a $username aid_shared_gid_start
+gpasswd -a $username aid_shared_gid_end
+gpasswd -a $username aid_overflowuid
+gpasswd -a $username aid_isolated_start
+gpasswd -a $username aid_isolated_end
+gpasswd -a $username aid_user_offset
+
 echo "New user can now have all permisdions"
 }
 
