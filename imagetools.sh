@@ -1,38 +1,39 @@
 #IMAGE TOOLS ------BEGIN
 
 
-lodevinit()
-#create two loop devices /dev/block/loop277 and /dev/block/loop278.
-#used for mounting image and sometimes for formating the image
+lodevctrl()
+# Gives an unused loop Device. If none are present creates a new one
+# used to link a file to the block device
 {
-if [ -b /dev/block/loop279 ]
-then
-echo ?Loop device exists?
-echo "Removing Any Previous Image"
-losetup -d /dev/bolck/loop279
-else
-echo "Creating Loop Device 1 "
-busybox mknod /dev/block/loop279 b 7 279
-fi
-
-if [ -b /dev/block/loop278 ]
-then
-echo ?Loop device exists?
-echo "Removing Any Previous Image"
-losetup -d /dev/bolck/loop278
-else
-echo "Creating Loop Device 2"
-busybox mknod /dev/block/loop278 b 7 278
-fi
-
-echo "Device Creation Compleated"
-
-cls
+    nxtLoopDev=$(busybox losetup -f)
+    if [ -b $nxtLoopDev ]
+    then
+        echo " A Free Loop device exists"
+        if [[ $1 == "new" ]]
+        then
+            echo "Ignoring the existing device on users request"
+        else
+            echo "Using Existing Loop device :"$nxtLoopDev
+            newLoopDev=nxtLoopDev
+            return 0;
+        fi
+    else
+        echo "No Free Loop Device Exist Creating a new one"
+        busybox mknod $nxtLoopDev b 7 $(busybox losetup -f|tail -n 1 |tail -c 2)
+        if [[ $? -eq 0 ]]
+        then
+            echo "Device Creation Compleated"
+            return 0
+        else
+            echo "Unable to setup loop device"
+            return 1
+        fi
+    fi
 }
 
 
 imgformat() #req variables fulpath fs
-{ 
+{
 #enable user to format an existing image
 if [[ $isini == "" ]]
 then
@@ -55,7 +56,7 @@ fi
 imgmake()      # req varrs "impath imname fs siz
 {
 #__________________________________________
-#ASK FOR PATH TO CREATE FILE 
+#ASK FOR PATH TO CREATE FILE
 #ASK FOR SIZE OF IMAGE
 # ASK FOR NAME OF IMAGE
 #ASK FOR FILESYSTEM OF IMAGE
@@ -144,5 +145,3 @@ export um=umount $mpath
 
 
 #IMAGE TOOLS ------END
-
-
