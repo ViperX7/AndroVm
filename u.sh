@@ -1201,6 +1201,12 @@ fi
 
 echo "$BIt May Take Some Time In Extracting System Base"
 tar -xvf $dpath -C $mpath
+clear
+echo "extraction complete"
+read
+mv /sdcard/debian_tmp/Debian/* /sdcard/debian_tmp/
+mv /sdcard/debian_tmp/Ubuntu/* /sdcard/debian_tmp/
+mv /sdcard/debian_tmp/Kali/* /sdcard/debian_tmp/
 echo "$B Extraction Complete "
 
 }
@@ -1224,8 +1230,8 @@ addusername
 export username=root
 addusername
 
-# A fix for apt package manager
-apt_fix
+#this user _apt cause package installation problems so i removed it 
+deluser _apt
 
 if [[ ! -d /etc/initiallisedux7/ ]]
 then
@@ -1234,13 +1240,7 @@ fi
 echo "user setup ">>/etc/initiallisedux7/usersetup
 echo "=> Done"
 
-}
 
-
-apt_fix()
-{
-    gpasswd -a aid_inet _apt
-    usermod -g aid_inet _apt
 }
 
 
@@ -1254,11 +1254,13 @@ givepermissions     #req mpath
 export username=root
 givepermissions      #req mpath
 
-# A fix for apt package manager
-echo "echo Alllying apt fix" >>$mpath/users.sh
-echo 'gpasswd -a aid_inet _apt ;usermod -g aid_inet _apt'>>$mpath/users.sh  
+#workaround failed switching to origconfig
+#this user _apt cause package installation problems so i removed it 
+#echo 'deluser _apt'>>$mpath/users.sh    #issue fixed on adding the user to inet group
+#failed (echo 'gpasswd -a _apt aid_inet'>>$mpath/users.sh)
 
-
+echo this user _apt cause package installation problems so i removed it 
+echo 'deluser _apt'>>$mpath/users.sh  
 
 echo 'if [[ ! -d /etc/initiallisedux7/ ]]'>>$mpath/users.sh
 echo 'then'>>$mpath/users.sh
